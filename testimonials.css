@@ -126,6 +126,9 @@
         justify-content: center;
         margin: 5px;
         z-index: 1;
+
+        /* Move the arrows up */
+        top: -10px; /* Adjust the value as needed */
     }
 
     .testimonial-prev {
@@ -145,6 +148,7 @@
         text-align: center;
     }
 }
+
 
 
 

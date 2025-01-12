@@ -68,7 +68,6 @@ header nav {
     cursor: pointer;
     gap: 5px;
     z-index: 1001;
-    margin-right: 30px;
 }
 
 .hamburger div {
@@ -85,41 +84,35 @@ header nav {
     }
 
     .nav-links {
-        justify-content: flex-end; /* Keep links right-aligned */
+        justify-content: flex-end;
         gap: 10px;
-        flex-grow: 1; /* Allow links to fill up available space */
-        flex-wrap: nowrap; /* Prevent wrapping when the screen shrinks */
-        margin-right: 30px; /* Keep the margin on the right */
+        flex-grow: 1;
+        flex-wrap: nowrap;
+        margin-right: 30px;
     }
 
-    /* Make hamburger icon visible on smaller screens */
     .hamburger {
-        display: none; /* Show hamburger menu */
+        display: none;
         position: absolute;
-        right: 30px; /* Keep hamburger 30px away from the right */
-        top: 20px; /* Position the hamburger to the right */
+        right: 30px;
+        top: 20px;
     }
 }
 
- /*Even smaller screens (mobile) */
 @media (max-width: 480px) {
-    /* Navbar layout changes */
     .nav-container {
-        padding-right: 20px; /* Keep space on the right */
-        justify-content: flex-start; /* Move everything to the left */
+        padding-right: 20px;
+        justify-content: flex-start;
     }
 
-    /* Ensure that nav links are aligned to the right and flexible */
     .nav-links {
         display: none;
     }
 
-    /* Make hamburger icon visible on smaller screens */
     .hamburger {
-        display: flex; /* Show hamburger menu */
+        display: flex;
         position: absolute;
-        right: 80px; /* Keep hamburger 30px away from the right */
-        top: 15px; /* Position the hamburger to the right */
+        top: 15px;
     }
 
     .hamburger div {
@@ -128,24 +121,23 @@ header nav {
         height: 4px;
     }
 
-    /* Adjust links inside the dropdown */
+
     .nav-links li a {
         padding: 10px 20px;
         font-size: 1.2rem;
         text-align: left;
-        color: #333; /* Default color */
-        text-decoration: none; /* Remove underline */
-        transition: color 0.3s ease; /* Smooth transition for color */
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
     }
 
-    /* Change link color on hover */
+
     .nav-links li a:hover {
-        color: #6c5ce7; /* Violet color on hover */
+        color: #6c5ce7;
     }
 
-    /* Nav links dropdown */
     .nav-links {
-        display: none; /* Hide links by default */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 42px;
@@ -153,11 +145,11 @@ header nav {
         right: 0;
         background-color: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin-right: 0; /* Remove right margin when the menu is opened */
+        margin-right: 0;
     }
 
     .nav-links.show {
-        display: flex; /* Show when hamburger is clicked */
+        display: flex;
     }
 }
 
@@ -165,7 +157,7 @@ header nav {
 .carousel {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ensures the section always fits the viewport height */
+    height: 100vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -183,8 +175,8 @@ header nav {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the images cover the container */
-    object-position: center; /* Centers the image */
+    object-fit: cover;
+    object-position: center;
 }
 
 .carousel-slide h1 {
@@ -196,14 +188,14 @@ header nav {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 2rem;
-    max-width: 90%; /* Ensures text doesn't stretch too wide */
-    word-wrap: break-word; /* Handles long words properly */
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
 /* Dots */
 .dots {
     position: absolute;
-    bottom: 20px; /* Provides sufficient spacing from the bottom edge */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -223,51 +215,47 @@ header nav {
     background: #6c5ce7;
 }
 
- /*Adjustments for Small Screens*/
 @media (max-width: 600px) {
     .carousel-slide h1 {
-        font-size: 1.5rem; /* Reduce font size for smaller screens */
-        padding: 8px 15px; /* Adjust padding for text box */
+        font-size: 1.5rem;
+        padding: 8px 15px;
     }
 
     .dots {
-        bottom: 35px; /* Adjust position of dots */
+        bottom: 35px;
     }
 }
 
 
-/* Section Title with Decorative Line */
 .section-title {
     font-size: 2.2rem;
-    color: #6c5ce7; /* Highlighted color for the title */
+    color: #6c5ce7;
     text-align: center;
     margin-bottom: 30px;
     position: relative;
-    font-family: 'Georgia', serif; /* Elegant serif font for a classic look */
+    font-family: 'Georgia', serif;
 }
 
 .section-title::after {
     content: "";
     display: block;
-    width: 120%; /* Slightly longer than the title */
-    max-width: 200px; /* Prevents it from becoming too long */
-    height: 4px; /* Thickness of the line */
-    background: #6c5ce7; /* Matches the title color */
-    margin: 10px auto 0; /* Spacing below the title */
+    width: 120%;
+    max-width: 200px;
+    height: 4px;
+    background: #6c5ce7;
+    margin: 10px auto 0;
     position: relative;
 }
 
-/* Definition Section */
 .definition {
-    background: #fffbea; /* Light yellow background */
+    background: #fffbea;
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Container for Definition, Etymology, and History */
 .definition-container {
     max-width: 1200px;
-    margin: 30px auto; /* Adds spacing between each subsection */
+    margin: 30px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -320,4 +308,13 @@ footer {
     padding: 10px 0;
     background: #333;
     color: white;
+}
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }

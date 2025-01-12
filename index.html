@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativity Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="get_ideas.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="derivatives.css">
+    <link rel="stylesheet" href="Types.css">
+    <script src="script.js" defer></script>
+    <script src="testimonials.js" defer></script>
+    <script src="derivatives.js" defer></script>
+    <script src="types.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#">Creativity</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about-creativity">About</a></li>
+                <li><a href="#types-of-creativity">Context</a></li>
+                <li><a href="#derivatives">Derivates</a></li>
+                <li><a href="#get-ideas">Get ideas</a></li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<section id="home" class="carousel">
+    <div class="carousel-slide">
+        <img src="images/art1.jpeg" alt="Creativity Image 1">
+        <h1>Creativity</h1>
+    </div>
+    <div class="carousel-slide">
+        <img src="images/art2.jpg" alt="Creativity Image 2">
+        <h1>Unleash Your Imagination</h1>
+    </div>
+    <div class="carousel-slide">
+        <img src="images/art3.jpg" alt="Creativity Image 3">
+        <h1>Inspire. Innovate. Create.</h1>
+    </div>
+    <div class="dots">
+        <span class="dot" onclick="setSlide(0)"></span>
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+    <h2 class="section-title">Meaning</h2>
+    <div class="testimonials-container">
+        <div class="testimonial-slide">
+            <img src="images/user.jpg" alt="Person 1" class="person-img">
+            <h3 class="person-title">Accountant</h3>
+            <p class="person-quote">"Ideas to put into practice, to draw, to invent something, to arrange a room in your
+                style." - Claudia</p>
+        </div>
+        <div class="testimonial-slide">
+            <img src="images/user.jpg" alt="Person 2" class="person-img">
+            <h3 class="person-title">Frontend Developer</h3>
+            <p class="person-quote">"The trait of finding innovative, unusual solutions to both common problems and
+                unforeseen, urgent matters." - Emilia</p>
+        </div>
+        <div class="testimonial-slide">
+            <img src="images/user.jpg" alt="Person 3" class="person-img">
+            <h3 class="person-title">Nail Artist</h3>
+            <p class="person-quote">"To create art awakened by art. The whole world is an endless space of inspiration.
+                Creativity is a flowering of identity, it is born from beauty and contributes to beautification,
+                bringing uniqueness." - Anca</p>
+        </div>
+        <div class="testimonial-slide">
+            <img src="images/user.jpg" alt="Person 3" class="person-img">
+            <h3 class="person-title">Fullstack developer</h3>
+            <p class="person-quote">"Creativity means a discharge of the subconscious, a force that makes the world more
+                beautiful" - Me :)</p>
+        </div>
+        <div class="testimonial-slide">
+            <img src="images/user.jpg" alt="Person 3" class="person-img">
+            <h3 class="person-title">Medicine Student</h3>
+            <p class="person-quote">"For example, for me, creativity is when I learn and make formulas from words to
+                make it easier to remember. Or I make a difficult word into several words." - Alexandra</p>
+        </div>
+    </div>
+    <button class="testimonial-prev" id="prev">&#10094;</button>
+    <button class="testimonial-next" id="next">&#10095;</button>
+</section>
+
+
+<section id="about-creativity" class="definition">
+    <h2 class="section-title">About Creativity</h2>
+
+
+    <div class="definition-container">
+        <div class="text-box">
+            <div class="definition-image">
+                <img src="images/painting-van-gogh.png" alt="Creative Thinking">
+            </div>
+            <div class="definition-text">
+                <h3>Definition of Creativity</h3>
+                <p>
+                    Creativity is the act of turning new and imaginative ideas into reality. It is the ability to
+                    perceive the world in new ways, to find hidden patterns, to make connections between seemingly
+                    unrelated phenomena, and to generate solutions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="definition-container">
+        <div class="text-box">
+            <div class="definition-image">
+                <img src="images/pottery-removebg-preview.png" alt="Etymology of Creativity">
+            </div>
+            <div class="definition-text">
+                <h3>Etymology</h3>
+                <p>
+                    The English word "creativity" comes from the Latin terms <em>creare</em> (meaning "to create") and
+                    <em>facere</em> (meaning "to make"). Its derivational suffixes also come from Latin.
+                    The word "create" appeared in English as early as the 14th century, notably in Chaucer's <em>The
+                    Parson's Tale</em>, to indicate divine creation.
+                    The modern meaning of creativity, as it refers to human innovation and creation, did not emerge
+                    until after the Age of Enlightenment.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="definition-container">
+        <div class="text-box">
+            <div class="definition-image">
+                <img src="images/statue-removebg-preview.png" alt="History of Creativity">
+            </div>
+            <div class="definition-text">
+                <h3>History</h3>
+                <p>
+                    Most ancient cultures (including Ancient Greece, Ancient China, and Ancient India) lacked the
+                    concept of creativity, seeing art as a form of discovery rather than a form of creation.
+                    In the Judeo-Christian-Islamic tradition, creativity was seen as the sole province of God, and human
+                    creativity was considered an expression of God's work. The modern conception of creativity began to
+                    take shape during the Renaissance, influenced by humanist ideas, which emphasized human potential
+                    and innovation.
+                    Scholarly interest in creativity spans several disciplines, including psychology, business studies,
+                    and cognitive science. It is also studied in education and the humanities, including philosophy and
+                    the arts.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="types-of-creativity" class="types-creativity">
+    <h2 class="section-title">Types of Creativity</h2>
+    <div class="types-container">
+
+        <div class="type-card" data-type="1">
+            <div class="card-background" style="background-image: url('types_images/ideation.webp');"></div>
+            <div class="card-text">
+                <h3>Ideation</h3>
+            </div>
+        </div>
+
+        <div class="type-card" data-type="2">
+            <div class="card-background" style="background-image: url('types_images/artistic.webp');"></div>
+            <div class="card-text">
+                <h3>Artistic</h3>
+            </div>
+        </div>
+
+        <div class="type-card" data-type="3">
+            <div class="card-background" style="background-image: url('types_images/problem-solving.jpg');"></div>
+            <div class="card-text">
+                <h3>Problem Solving</h3>
+            </div>
+        </div>
+
+        <div class="type-card" data-type="4">
+            <div class="card-background" style="background-image: url('types_images/science.jpg');"></div>
+            <div class="card-text">
+                <h3>Scientific</h3>
+            </div>
+        </div>
+
+        <div class="type-card" data-type="5">
+            <div class="card-background" style="background-image: url('types_images/crowd.jpg');"></div>
+            <div class="card-text">
+                <h3>Social</h3>
+            </div>
+        </div>
+
+        <div class="type-card" data-type="6">
+            <div class="card-background" style="background-image: url('types_images/business.jpg');"></div>
+            <div class="card-text">
+                <h3>Entrepreneurial</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-modal" class="popup-modal hidden">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()">X</button>
+            <div class="popup-text">
+                <h3 id="popup-title"></h3>
+                <p id="popup-description"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="derivatives" class="derivates">
+    <h2 class="section-title">Derivatives of Creativity</h2>
+    <div class="derivates-container">
+        <div class="derivate-card" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+            <div class="card-front">
+                <h3>Creator</h3>
+            </div>
+            <div class="card-back">
+                <p><strong>Creator:</strong> A person who brings something into existence.</p>
+            </div>
+        </div>
+
+        <div class="derivate-card" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+            <div class="card-front">
+                <h3>Creation</h3>
+            </div>
+            <div class="card-back">
+                <p><strong>Creation:</strong> The action or process of bringing something into existence.</p>
+            </div>
+        </div>
+
+        <div class="derivate-card" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+            <div class="card-front">
+                <h3>Creative</h3>
+            </div>
+            <div class="card-back">
+                <p><strong>Creative:</strong> Relating to or involving the use of imagination or original ideas to
+                    create something.</p>
+            </div>
+        </div>
+
+        <div class="derivate-card" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+            <div class="card-front">
+                <h3>Creativeness</h3>
+            </div>
+            <div class="card-back">
+                <p><strong>Creativeness:</strong> The ability to create new ideas or things, showing originality.</p>
+            </div>
+        </div>
+
+        <div class="derivate-card" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+            <div class="card-front">
+                <h3>To create</h3>
+            </div>
+            <div class="card-back">
+                <p><strong>To create:</strong> To make something new, or invent something.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="section-title">Get inspired</h2>
+<section id="get-ideas" class="get-ideas">
+
+    <div class="ideas-container">
+        <div class="cat-container">
+            <div class="light-bulb" onclick="generateIdea()">
+                <img src="images/bulb-removebg-preview.png" alt="Light Bulb" id="light-bulb">
+            </div>
+            <img class="cat-image" src="images/cat.webp" alt="Creative Cat">
+        </div>
+        <div class="dialog-box">
+            <p id="dialog-text">Click on the light bulb to get creative ideas.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Creativity Project</p>
+</footer>
+</body>
+</html>

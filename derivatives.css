@@ -1,11 +1,9 @@
-/* Derivates Section */
 .derivates {
-    background-color: #fffbea; /* Lighter yellow with more contrast */
+    background-color: #fffbea;
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Container for the cards */
 .derivates-container {
     display: flex;
     justify-content: center;
@@ -13,66 +11,59 @@
     flex-wrap: wrap;
 }
 
-/* Individual Derivate Card */
 .derivate-card {
-    width: 220px; /* Slightly larger cards for more visibility */
+    width: 220px;
     height: 320px;
-    perspective: 1000px; /* 3D effect for flip */
+    perspective: 1000px;
 }
 
-/* Front and Back of Cards */
+
 .card-front, .card-back {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; /* Ensures the back of the card is hidden */
+    backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for contrast */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s;
 }
 
-/* Front of the Card */
 .card-front {
-    background-color: #fff;
+    background-color: #fffbff;
     color: #333;
-    border: 2px solid #6c5ce7; /* Add border to make it stand out more */
+    border: 2px solid #6c5ce7;
 }
 
-/* Back of the Card */
 .card-back {
-    background-color: #6c5ce7; /* Strong color for better contrast */
+    background-color: #6c5ce7;
     color: white;
-    transform: rotateY(180deg); /* Initially rotated */
+    transform: rotateY(180deg);
     padding: 10px;
     text-align: center;
 }
 
-/* Flip effect */
 .derivate-card:hover .card-front {
-    transform: rotateY(180deg); /* Flip the front */
+    transform: rotateY(180deg);
 }
 
 .derivate-card:hover .card-back {
-    transform: rotateY(0); /* Flip the back */
+    transform: rotateY(0);
 }
 
-/* Title Styles */
 .card-front h3 {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #6c5ce7; /* Stronger title color for emphasis */
+    color: #6c5ce7;
 }
 
-/* Back text styling */
 .card-back p {
     font-size: 1rem;
     font-style: italic;
 }
 
-/* Hover effects for a more intense change */
 .derivate-card:hover {
-    transform: scale(1.05); /* Slight scaling effect on hover */
+    transform: scale(1.05);
 }
