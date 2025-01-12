@@ -1,0 +1,132 @@
+/* Get Ideas Section */
+.get-ideas {
+    background: #fffbea; /* Dark blue background */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ideas-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between the cat and dialog box */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.cat-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat-image {
+    width: 100%;
+    max-width: 300px; /* Limit the cat image size */
+    height: auto;
+    object-fit: contain;
+}
+
+
+.light-bulb img {
+    width: 100%;
+    height: 100%;
+}
+
+.dialog-box {
+    position: relative;
+    width: 300px; /* Fixed width */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    overflow: hidden; /* Prevents content overflow */
+    transition: height 0.3s ease; /* Smooth resizing */
+}
+
+.dialog-box:before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Arrow vertically aligned to the center of the dialog box */
+    left: -20px; /* Position arrow on the left */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent rgba(255, 255, 255, 0.9) transparent transparent; /* Creates a triangle pointing left */
+    transform: translateY(-50%);
+}
+
+.dialog-box p {
+    margin: 0; /* Removes default margin */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+
+.light-bulb {
+    position: absolute;
+    top: -50px; /* Position the light bulb above the cat */
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.light-bulb:hover {
+    transform: translateY(-10px) rotate(-10deg); /* Moves up and tilts slightly */
+}
+
+.light-bulb:hover {
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Get Ideas Section - Responsive Adjustments */
+@media (max-width: 600px) {
+    .ideas-container {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center; /* Center align the content */
+        gap: 20px; /* Reduce spacing between cat and dialog box */
+    }
+
+    .cat-container {
+        align-items: center; /* Ensure proper centering for smaller screens */
+    }
+
+    .cat-image {
+        max-width: 200px; /* Smaller cat image size */
+    }
+
+    .dialog-box {
+        width: 90%; 
+        max-width: 300px;
+        font-size: 1rem;
+        padding: 15px;
+        word-wrap: break-word;
+    }
+
+    .dialog-box:before {
+        left: -15px;
+        border-width: 8px;
+    }
+
+    .light-bulb {
+        top: -40px;
+        width: 60px;
+        height: 60px;
+    }
+}

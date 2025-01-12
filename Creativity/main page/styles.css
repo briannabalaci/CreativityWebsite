@@ -1,0 +1,323 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-color: #fffbea;
+}
+
+
+header nav {
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6c5ce7;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+/* Navigation link styles */
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #6c5ce7;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+    margin-right: 30px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding-right: 20px;
+        justify-content: flex-start;
+    }
+
+    .nav-links {
+        justify-content: flex-end; /* Keep links right-aligned */
+        gap: 10px;
+        flex-grow: 1; /* Allow links to fill up available space */
+        flex-wrap: nowrap; /* Prevent wrapping when the screen shrinks */
+        margin-right: 30px; /* Keep the margin on the right */
+    }
+
+    /* Make hamburger icon visible on smaller screens */
+    .hamburger {
+        display: none; /* Show hamburger menu */
+        position: absolute;
+        right: 30px; /* Keep hamburger 30px away from the right */
+        top: 20px; /* Position the hamburger to the right */
+    }
+}
+
+ /*Even smaller screens (mobile) */
+@media (max-width: 480px) {
+    /* Navbar layout changes */
+    .nav-container {
+        padding-right: 20px; /* Keep space on the right */
+        justify-content: flex-start; /* Move everything to the left */
+    }
+
+    /* Ensure that nav links are aligned to the right and flexible */
+    .nav-links {
+        display: none;
+    }
+
+    /* Make hamburger icon visible on smaller screens */
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+        position: absolute;
+        right: 80px; /* Keep hamburger 30px away from the right */
+        top: 15px; /* Position the hamburger to the right */
+    }
+
+    .hamburger div {
+        background-color: #6c5ce7;
+        width: 30px;
+        height: 4px;
+    }
+
+    /* Adjust links inside the dropdown */
+    .nav-links li a {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        text-align: left;
+        color: #333; /* Default color */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s ease; /* Smooth transition for color */
+    }
+
+    /* Change link color on hover */
+    .nav-links li a:hover {
+        color: #6c5ce7; /* Violet color on hover */
+    }
+
+    /* Nav links dropdown */
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 42px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-right: 0; /* Remove right margin when the menu is opened */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show when hamburger is clicked */
+    }
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensures the section always fits the viewport height */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images cover the container */
+    object-position: center; /* Centers the image */
+}
+
+.carousel-slide h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 2rem;
+    max-width: 90%; /* Ensures text doesn't stretch too wide */
+    word-wrap: break-word; /* Handles long words properly */
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 20px; /* Provides sufficient spacing from the bottom edge */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #6c5ce7;
+}
+
+ /*Adjustments for Small Screens*/
+@media (max-width: 600px) {
+    .carousel-slide h1 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+        padding: 8px 15px; /* Adjust padding for text box */
+    }
+
+    .dots {
+        bottom: 35px; /* Adjust position of dots */
+    }
+}
+
+
+/* Section Title with Decorative Line */
+.section-title {
+    font-size: 2.2rem;
+    color: #6c5ce7; /* Highlighted color for the title */
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    font-family: 'Georgia', serif; /* Elegant serif font for a classic look */
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 120%; /* Slightly longer than the title */
+    max-width: 200px; /* Prevents it from becoming too long */
+    height: 4px; /* Thickness of the line */
+    background: #6c5ce7; /* Matches the title color */
+    margin: 10px auto 0; /* Spacing below the title */
+    position: relative;
+}
+
+/* Definition Section */
+.definition {
+    background: #fffbea; /* Light yellow background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Container for Definition, Etymology, and History */
+.definition-container {
+    max-width: 1200px;
+    margin: 30px auto; /* Adds spacing between each subsection */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.text-box {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+
+.definition-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.definition-text {
+    flex: 1;
+}
+
+.definition-text h3 {
+    color: #6c5ce7;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.definition-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+}
