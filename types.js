@@ -1,11 +1,12 @@
 const typesInfo = {
     "1": {
         title: "Ideation Creativity",
-        text: "Problem-solving creativity involves thinking critically and innovatively to overcome challenges or obstacles. It’s about finding unconventional solutions to difficult situations. \n" +
+        text: "Ideation creativity involves generating fresh and innovative ideas to solve problems or create new opportunities. It's the ability to think outside the box and brainstorm unconventional solutions to challenges. \n" +
             "Examples: A writer brainstorming a unique storyline for a novel.\n" +
             "A marketing team generating ideas for a new ad campaign.\n" +
-            "Coming up with a new recipe that fuses two cuisines.",
+            "Inventing a new recipe that fuses two cuisines.\n",
     },
+
     "2": {
         title: "Artistic Creativity",
         text: "Definition: Artistic creativity is expressed through art, design, music, and other forms of aesthetic creation. It focuses on the ability to create beauty, convey emotions, or share stories through artistic mediums.\n" +
